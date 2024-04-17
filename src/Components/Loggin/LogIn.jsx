@@ -3,13 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
 import app from "../../firebase/firebase";
 import { GithubAuthProvider } from "firebase/auth";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import { toast } from "react-toastify";
 
 const LogIn = () => {
   const navigate = useNavigate()
@@ -89,7 +88,7 @@ const LogIn = () => {
               </div>
 
             </form>
-            <ToastContainer></ToastContainer>
+            
             <div className="p-5 flex justify-around gap-4 lg:flex-row md:flex-col flex-col">
               <button className="btn  btn-ghost border border-black " onClick={handleGoogleSignIn}><FaGoogle className="text-2xl"></FaGoogle>LogIn with Google </button>
               <button className="btn btn-ghost border border-black " onClick={handleGithubSignIn}><FaGithub className="text-2xl"></FaGithub>LogIn with Github </button>

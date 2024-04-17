@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 const Feedback = () => {
+    const {loading}=useContext(AuthContext)
+    if(loading){
+        return <div className="text-center"><span className="loading loading-spinner loading-lg"></span></div>
+    }
     return (
         
 

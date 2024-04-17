@@ -24,7 +24,7 @@ const Navbar = () => {
     <li><NavLink to='/aboutUs'>Abouts</NavLink></li>
     <li><NavLink to='/contacts'>Contacts Us</NavLink></li>
     <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
-    <PrivateRoute><li><NavLink to='/feedback'>Feedback</NavLink></li></PrivateRoute>
+    <li><NavLink to='/feedback'>Feedback</NavLink></li>
 
   </>
   const handelUpdate = (e) => {

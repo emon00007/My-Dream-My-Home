@@ -30,7 +30,7 @@ const HomeDetails = () => {
                         <p className="mt-4 font-bold "><span className="text-gray-500">YearOfPublishing: </span>{} </p>
                         <p className="mt-4 font-bold "><span className="text-gray-500">Rating: </span>{} </p>
                         <div className="flex gap-4 mt-4">
-                           <Link to="/"> <button  className="btn bg-purple-400">View Nore home</button></Link>
+                           <Link to="/"> <button  className="btn bg-purple-400">View  Home</button></Link>
                            <Link to="/"> <button  className="btn bg-purple-400">{home.status}</button></Link>
                             
                         </div>
