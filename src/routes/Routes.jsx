@@ -10,12 +10,14 @@ import Homes from "../Components/Home/Homes";
 import HomeDetails from "../Components/HomeDetails/HomeDetails";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
+import ErrorPage from "../Components/Error/ErrorPage";
 
 const routs = createBrowserRouter([
     
     {
         path:'/',
         element:<MainLayout></MainLayout>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {   
                 
