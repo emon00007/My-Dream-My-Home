@@ -17,8 +17,7 @@ const BannerSlider = () => {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       loop={true}
-      className='sm:h-[400px] md:h-[400px] lg:h-[600px] md:mx-auto lg:mx-5 mx-auto'
-    >
+      className='sm:h-[400px] md:h-[400px] lg:h-[600px] '>
       <SwiperSlide >
         <img className='relative w-screen' src="10-Companies-That-Hire-for-Remote-Real-Estate-Jobs-1024x512.jpg" alt="" />
         <div className='absolute left-[40%] top-[40%]'>

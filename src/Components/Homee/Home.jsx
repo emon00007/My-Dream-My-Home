@@ -15,7 +15,7 @@ const Home = ({ homes }) => {
                             />
                         </figure>
                         <div className="card-body">
-                            <h2 data-aos="fade-down-right" className="card-title font-bold text-3xl">{estate_title}</h2>
+                            <h2  className="card-title font-bold text-3xl">{estate_title}</h2>
                             <p>{segment_name}</p>
                             <div className="card-actions justify-start">
                                 <Link to={`/homedetails/${id}`}><button className="btn bg-purple-400">View Property</button></Link>

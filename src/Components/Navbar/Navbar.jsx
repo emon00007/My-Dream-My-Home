@@ -59,9 +59,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div tabIndex={0} role="button" className="btn text-4xl btn-ghost btn-circle ">
-          <div className="w-full rounded-full mr-4">
-            {user ? <img className="w-full  rounded-full" alt="#" src={user.photoURL} /> : <CgProfile className="text-3xl"></CgProfile>}
+        <div tabIndex={0} role="button" className=" text-4xl   ">
+          <div className="w-10 h-10 rounded-full mr-4">
+            {user ? <img className="w-16 h-10 rounded-full" alt="#" src={user.photoURL} /> : <CgProfile className="text-3xl"></CgProfile>}
           </div>
         </div>
         {
