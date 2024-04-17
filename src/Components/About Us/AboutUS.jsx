@@ -36,9 +36,9 @@ const AboutUS = () => {
                             <p className="font-medium text-xl leading-5 text-gray-800 mt-4">Olivia</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                            <img className="" src="https://i.ibb.co/HYCJ9dd/wp9-ELy-SQ-400x400.jpg" alt="Claint James Guiral featued Img" />
+                            <img className="" src="https://i.ibb.co/fxcBGpm/385-1.webp" alt="Claint James Guiral featued Img" />
                             
-                            <p className="font-medium text-xl leading-5 text-gray-800 mt-4">James Guiral</p>
+                            <p className="font-medium text-xl leading-5 text-gray-800 mt-4">James Guirale</p>
                         </div>
                         <div className="p-4 pb-6 flex justify-center flex-col items-center">
                             <img className="" src="https://i.ibb.co/xghDKmn/82847b28-c433-11ed-9c16-0210609a3fe2.jpg" alt="Elijah featured img" />
