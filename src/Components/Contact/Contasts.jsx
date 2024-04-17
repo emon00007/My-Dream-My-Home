@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
-
+import 'animate.css';
 
 
 const Contasts = () => {
     return (
         <div>
               <Helmet><title>contact</title></Helmet>
-            <section className="p-6  text-white">
+            <section className="p-6 animate__animated animate__backInLeft text-white">
                 <form noValidate="" className="container bg-black w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow dark:bg-gray-50">
                     <h2 className="w-full text-3xl font-bold leading-tight">Contact us</h2>
                     <div>
