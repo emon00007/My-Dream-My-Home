@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 
 const UpdateProfile = () => {
@@ -24,6 +25,7 @@ const UpdateProfile = () => {
     };
     return (
         <div data-aos="flip-right" className="mb-32">
+            <Helmet><title>UpdateProfile</title></Helmet>
             <div className="flex lg:flex-row flex-col justify-center items-center lg:w-[800px] mx-auto border-2 rounded-lg p-5 gap-5 my-10">
                 <div className="lg:w-[400px] p-5 space-y-3">
                     {user && user.photoURL && (

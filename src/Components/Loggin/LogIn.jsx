@@ -3,11 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import app from "../../firebase/firebase";
 import { GithubAuthProvider } from "firebase/auth";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const LogIn = () => {
   const navigate = useNavigate()
@@ -39,7 +41,7 @@ const LogIn = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 1000); // 1-second delay
+      }, 1000); 
     } catch (error) {
       console.error(error);
     }
@@ -52,19 +54,20 @@ const LogIn = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 1000); // 2-second delay
+      }, 1000); 
     } catch (error) {
       console.error(error);
     }
   }
   return (
     <div>
+      <Helmet><title>Login</title></Helmet>
       <div className=" min-h-screen bg-base-200">
 
         <div className="text-center md:p-3 lg:p-10 md:text-3xl lg:text-5xl md:font-semibold lg:font-extrabold"><p>Please LogIn</p></div>
         <div className="hero ">
 
-          <div className="card shrink-0  lg:w-1/3 mx-auto  shadow-2xl bg-base-100">
+          <div className="card shrink-0  lg:w-2/5 mx-auto  shadow-2xl bg-base-100">
             <form onSubmit={handelLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -86,7 +89,8 @@ const LogIn = () => {
               </div>
 
             </form>
-            <div className="p-5 flex gap-4 lg:flex-row md:flex-col flex-col">
+            <ToastContainer></ToastContainer>
+            <div className="p-5 flex justify-around gap-4 lg:flex-row md:flex-col flex-col">
               <button className="btn  btn-ghost border border-black " onClick={handleGoogleSignIn}><FaGoogle className="text-2xl"></FaGoogle>LogIn with Google </button>
               <button className="btn btn-ghost border border-black " onClick={handleGithubSignIn}><FaGithub className="text-2xl"></FaGithub>LogIn with Github </button>
             </div>

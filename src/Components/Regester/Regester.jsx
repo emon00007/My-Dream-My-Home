@@ -2,7 +2,10 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+import { updateProfile } from "firebase/auth";
 
 
 const Regester = () => {
@@ -51,7 +54,7 @@ const Regester = () => {
     return (
 
         <div className="">
-            
+            <Helmet><title>Regestration</title></Helmet>
             <div className=" min-h-screen bg-base-200">
                 
             <div className="text-center md:p-3 lg:p-10 md:text-3xl lg:text-5xl md:font-semibold lg:font-extrabold"><p>Please Register</p></div>

@@ -1,11 +1,13 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 
 const Feedback = () => {
     return (
+        
 
-        <div  data-aos="fade-up"
-        data-aos-duration="2000" className=" mb-20 flex flex-col m-auto max-w-xl p-8 shadow-sm rounded-xl lg:p-12 text-gray-50 bg-gray-800">
+        <div  data-aos="fade-up"data-aos-duration="2000" className=" mb-20 flex flex-col m-auto max-w-xl p-8 shadow-sm rounded-xl lg:p-12 text-gray-50 bg-gray-800">
+           <Helmet><title>Feedback</title></Helmet>
             <div className="flex flex-col items-center w-full">
                 <h2 className="text-3xl font-semibold text-center">Your opinion matters!</h2>
                 <div className="flex flex-col items-center py-6 space-y-3">

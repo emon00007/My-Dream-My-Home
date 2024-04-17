@@ -1,4 +1,5 @@
 
+import { Helmet } from 'react-helmet';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 
@@ -11,6 +12,7 @@ const HomeDetails = () => {
     console.log(home);
     return (
         <div>
+            <Helmet><title>HomeDetails</title></Helmet>
             <div className="hero rounded-xl bg-purple-400  ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left w-1/2">

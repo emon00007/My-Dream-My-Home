@@ -9,6 +9,7 @@ import Feedback from "../Components/Feedback/Feedback";
 import Homes from "../Components/Home/Homes";
 import HomeDetails from "../Components/HomeDetails/HomeDetails";
 import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
+import PrivateRoute from "../Components/PrivateRoute/PrivateRoute";
 
 const routs = createBrowserRouter([
     
@@ -46,11 +47,12 @@ const routs = createBrowserRouter([
             },
             {
                 path:'/homedetails/:id',
-                element:<HomeDetails></HomeDetails>,
+                element:<PrivateRoute><HomeDetails></HomeDetails></PrivateRoute>,
                 loader:()=>fetch(`/fakedata.json`)
 
-            },{path:'/updateProfile',
-                element:<UpdateProfile></UpdateProfile>
+            },
+            {path:'/updateProfile',
+            element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
             }
            
         ]
