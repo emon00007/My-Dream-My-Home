@@ -1,7 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../MainLayout/MainLayout";
-import Home from "../Components/Home/Home";
+
 import LogIn from "../Components/Loggin/LogIn";
+import Regester from "../Components/Regester/Regester";
+import AboutUS from "../Components/About Us/AboutUS";
+import Contasts from "../Components/Contact/Contasts";
+import Feedback from "../Components/Feedback/Feedback";
+import Homes from "../Components/Home/Homes";
+import HomeDetails from "../Components/HomeDetails/HomeDetails";
+import UpdateProfile from "../Components/UpdateProfile/UpdateProfile";
 
 const routs = createBrowserRouter([
     
@@ -9,14 +16,43 @@ const routs = createBrowserRouter([
         path:'/',
         element:<MainLayout></MainLayout>,
         children:[
-            {
+            {   
+                
                 path:'/',
-                element:<Home></Home>
+                element:<Homes></Homes>,
+                loader:()=>fetch(`/fakedata.json`)
+              
             },
             {
                 path:'/login',
                 element:<LogIn></LogIn>
+            },
+            {
+                path:'/register',
+                element:<Regester></Regester>
+            },
+            {
+                path:'/aboutUs',
+                element:<AboutUS></AboutUS>
+            },
+            {
+                path:'/contacts',
+                element:<Contasts></Contasts>
+
+            },
+            {
+                path:'/feedback',
+                element:<Feedback></Feedback>
+            },
+            {
+                path:'/homedetails/:id',
+                element:<HomeDetails></HomeDetails>,
+                loader:()=>fetch(`/fakedata.json`)
+
+            },{path:'/updateProfile',
+                element:<UpdateProfile></UpdateProfile>
             }
+           
         ]
     }
 ])

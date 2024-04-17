@@ -1,0 +1,75 @@
+[
+    {
+      "image_url": "https://i.ibb.co/n7twtTd/SOHL0122005-780x440-mobile.jpg",
+      "estate_title": "Single-family homes",
+      "id": "001",
+      "segment_name": "Home ",
+      "description": "Experience the epitome of luxury at our beachfront resort. Featuring spacious rooms, gourmet dining options, and breathtaking ocean views.",
+      "price": "$500,000",
+      "status": "Sale",
+      "area": "5000 sq ft",
+      "location": "Coastal Paradise, ABC City",
+      "facilities": ["Infinity Pool", "Spa", "Private Beach"]
+    },
+    {
+      "image_url": "https://i.ibb.co/nfkqNRx/654266eec7a05ee63261be0b-townhouse.png",
+      "estate_title": "townhouses  homes",
+      "id": "002",
+      "segment_name": "townhouses",
+      "description": "Nestled amidst serene mountains, our cozy motel offers comfortable rooms and easy access to hiking trails and scenic viewpoints.",
+      "price": "$100,000",
+      "status": "Rent",
+      "area": "1500 sq ft",
+      "location": "Mountain Retreat, XYZ Town",
+      "facilities": ["Parking", "Wi-Fi", "Mountain Views"]
+    },
+    {
+      "image_url": "https://i.ibb.co/3zX4Sv6/student-accommodation-in-usa.jpg",
+      "estate_title": "student Hostels",
+      "id": "003",
+      "segment_name": "student housing,",
+      "description": "Escape to our charming seaside rental cottage. Enjoy stunning sunsets, beachcombing, and fresh seafood just steps from your door.",
+      "price": "$200 per night",
+      "status": "Rent",
+      "area": "800 sq ft",
+      "location": "Oceanfront Haven, PQR Village",
+      "facilities": ["Beach Access", "Outdoor Grill", "Fire Pit"]
+    },
+    {
+      "image_url": "https://i.ibb.co/vvspdsr/blog-listing-5reasonstomoveinnow.jpg",
+      "estate_title": " senior living communities,",
+      "id": "004",
+      "segment_name": "Home ",
+      "description": "Experience the beauty of nature at our rustic lodge nestled in the heart of the mountains. Cozy cabins, campfire nights, and hiking trails await.",
+      "price": "$300,000",
+      "status": "Sale",
+      "area": "3000 sq ft",
+      "location": "Mountain Retreat, XYZ Town",
+      "facilities": ["Fireplace", "Hiking Trails", "Outdoor Dining"]
+    },
+    {
+      "image_url": "https://i.ibb.co/12TqxJt/guesthouse5.jpg",
+      "estate_title": " senior living communities,home",
+      "id": "005",
+      "segment_name": " senior living communities,",
+      "description": "Experience the charm of rural life at our cozy guesthouse. Tranquil surroundings, home-cooked meals, and friendly hosts await you.",
+      "price": "$150 per night",
+      "status": "Rent",
+      "area": "1200 sq ft",
+      "location": "Serene Countryside, LMN Village",
+      "facilities": ["Garden", "Farm Animals", "Homecooked Meals"]
+    },
+    {
+      "image_url": "https://i.ibb.co/2yxQ2vG/Screen-Shot-2022-05-16-at-1-22-42-PM.png",
+      "estate_title": "vacation rentals - beach home",
+      "id": "006",
+      "segment_name": "Homes",
+      "description": "Immerse yourself in city chic at our boutique hotel. Stylish rooms, rooftop bar, and trendy dining options await in the heart of downtown.",
+      "price": "$700,000",
+      "status": "Sale",
+      "area": "4000 sq ft",
+      "location": "Vibrant City Center, UVW Metropolis",
+      "facilities": ["Rooftop Bar", "Fitness Center", "Concierge Service"]
+    }
+  ]
+  
