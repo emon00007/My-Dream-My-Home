@@ -15,7 +15,7 @@ const Regester = () => {
   const { createUser } = useContext(AuthContext)
   const navigate = useNavigate()
   const handelRegister = e => {
-    navigate('/')
+    
     e.preventDefault()
     console.log(e.currentTarget)
     const form = new FormData(e.currentTarget)
@@ -42,12 +42,15 @@ const Regester = () => {
         updateProfile(result.user, {
           displayName: name,
           photoURL: photoUrl
-        })
-        toast.success("Registration successful!");
+        }).then(() => {
+          toast.success("Registration successful!");
+          navigate('/')
+        }).catch((error) => {
+          setRegisterError(error.message);
+        });
       })
-      
       .catch((error) => {
-        setRegisterError('Email Already exist', error.message);
+        setRegisterError('Email Already exist',error.message);
       });
   }
   return (
