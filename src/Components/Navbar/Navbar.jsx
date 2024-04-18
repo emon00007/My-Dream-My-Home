@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 // import { getAuth, updateProfile } from "firebase/auth";
 import { CgProfile } from "react-icons/cg";
+import { Tooltip } from "react-tooltip";
 // import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
@@ -10,6 +11,7 @@ const Navbar = () => {
   // const auth = getAuth()
   const { user, logOut } = useContext(AuthContext)
   const handelSignOut = () => {
+    
     logOut()
       .then(result => {
         console.log(result)
@@ -50,9 +52,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <div tabIndex={0} role="button" className=" text-4xl   ">
-          <div className="w-10 h-10 rounded-full mr-4">
-            {user && <img className="w-16 h-10 rounded-full" alt="#" src={user.photoURL } />|| <CgProfile className="text-3xl"></CgProfile> }
+        <div tabIndex={0}  className=" text-4xl  "  >
+        
+          <div className="w-10 h-10 rounded-full mr-4 tooltip tooltip-left "data-tip={user?.displayName}>
+            {user && <img className="w-16 h-10 rounded-full "  alt="#" src={user.photoURL } />|| <CgProfile className="text-3xl"></CgProfile> }
           </div>
         </div>
         {
