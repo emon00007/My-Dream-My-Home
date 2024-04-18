@@ -5,14 +5,14 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { Helmet } from "react-helmet";
-import { updateProfile } from "firebase/auth";
+
 import { toast } from "react-toastify";
 
 
 const Regester = () => {
   const [registerError, setRegisterError] = useState("");
   const [showPassword, setShowpassword] = useState(false);
-  const { createUser } = useContext(AuthContext)
+  const { createUser,setUser,updateUser } = useContext(AuthContext)
   const navigate = useNavigate()
   const handelRegister = e => {
     
@@ -39,11 +39,12 @@ const Regester = () => {
     createUser(email, password)
   
       .then((result) => {
-        updateProfile(result.user, {
-          displayName: name,
-          photoURL: photoUrl
-        }).then(() => {
+        console.log(result)
+        updateUser(
+          name,photoUrl
+        ).then(() => {
           toast.success("Registration successful!");
+          setUser({displayName:name,photoURL:photoUrl});
           navigate('/')
         }).catch((error) => {
           setRegisterError(error.message);

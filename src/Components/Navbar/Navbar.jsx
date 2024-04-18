@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { getAuth, updateProfile } from "firebase/auth";
+// import { getAuth, updateProfile } from "firebase/auth";
 import { CgProfile } from "react-icons/cg";
-import PrivateRoute from "../PrivateRoute/PrivateRoute";
+// import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const Navbar = () => {
-  const auth = getAuth()
+  // const auth = getAuth()
   const { user, logOut } = useContext(AuthContext)
   const handelSignOut = () => {
     logOut()
@@ -27,17 +27,7 @@ const Navbar = () => {
     <li><NavLink to='/feedback'>Feedback</NavLink></li>
 
   </>
-  const handelUpdate = (e) => {
-    e.preventDefault();
-    const PhotoURL = e.target.PhotoURL.value;
-    updateProfile(auth.currentUser, { photoURL: PhotoURL })
-      .then(() => {
-        console.log('Profile photo updated successfully');
-      })
-      .catch((error) => {
-        console.error('Error updating profile photo:', error);
-      });
-  }
+ 
   return (
     <div className="navbar z-50 bg-base-100">
       <div className="navbar-start">
@@ -62,7 +52,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div tabIndex={0} role="button" className=" text-4xl   ">
           <div className="w-10 h-10 rounded-full mr-4">
-            {user ? <img className="w-16 h-10 rounded-full" alt="#" src={user.photoURL} /> : <CgProfile className="text-3xl"></CgProfile>}
+            {user && <img className="w-16 h-10 rounded-full" alt="#" src={user.photoURL } />|| <CgProfile className="text-3xl"></CgProfile> }
           </div>
         </div>
         {

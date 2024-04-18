@@ -1,21 +1,21 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { updateProfile } from "firebase/auth";
+
 import { Helmet } from "react-helmet";
 
 
 const UpdateProfile = () => {
-    const { user } = useContext(AuthContext);
+    const { user,updateUser } = useContext(AuthContext);
 
     const update = (e) => {
-        // e.preventDefault();
+        
         const name = e.target.name.value;
         const photoURL = e.target.photoURL.value;
 
-        updateProfile(user, {
-            displayName: name,
-            photoURL: photoURL
-        })
+        updateUser(
+            name,
+            photoURL
+        )
             .then(() => {
                 console.log('Profile updated successfully');
             })
