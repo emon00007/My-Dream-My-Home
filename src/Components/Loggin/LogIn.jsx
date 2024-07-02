@@ -40,7 +40,7 @@ const LogIn = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 1000); 
+      }, 1000);
     } catch (error) {
       console.error(error);
     }
@@ -53,7 +53,7 @@ const LogIn = () => {
       toast.success('Sign in successful!');
       setTimeout(() => {
         navigate(location?.state ? location.state : "/");
-      }, 1000); 
+      }, 1000);
     } catch (error) {
       console.error(error);
     }
@@ -68,32 +68,41 @@ const LogIn = () => {
 
           <div className="card shrink-0  lg:w-2/5 mx-auto  shadow-2xl bg-base-100">
             <form onSubmit={handelLogin} className="card-body">
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
               </div>
+
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                </label>
+                <div className="relative">
+                  <input
+                    className="input input-bordered w-full py-2 px-4"
+
+                    placeholder="Enter Your Password"
+                    name="password"
+                    id=""
+                    required
+                  />
+
+                </div>
               </div>
               <div className="form-control mt-6">
-                <Link to='/' className="btn btn-primary text-white text-2xl">Login</Link>
+                <button className="btn btn-primary">Log In</button>
               </div>
 
             </form>
-            
+
             <div className="p-5 flex justify-around gap-4 lg:flex-row md:flex-col flex-col">
               <button className="btn  btn-ghost border border-black " onClick={handleGoogleSignIn}><FaGoogle className="text-2xl"></FaGoogle>LogIn with Google </button>
               <button className="btn btn-ghost border border-black " onClick={handleGithubSignIn}><FaGithub className="text-2xl"></FaGithub>LogIn with Github </button>
             </div>
-            <div className="text-center py-5"><p>Do not Have an Account <Link className="text-blue-600" to="/register">Register</Link></p></div>
+            <div className="text-center py-5"><p>Do not Have an Account <Link className="text-blue-600" to="/register">Regester</Link></p></div>
           </div>
         </div>
       </div>
